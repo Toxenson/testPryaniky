@@ -7,23 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BCA58ADA33C297B5036D9F16 /* Pods_testPryaniky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F2EB8D4849F9124D3475E3 /* Pods_testPryaniky.framework */; };
 		CE5EC32F2862448A009BFB3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EC32E2862448A009BFB3E /* AppDelegate.swift */; };
 		CE5EC3312862448A009BFB3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EC3302862448A009BFB3E /* SceneDelegate.swift */; };
-		CE5EC3332862448A009BFB3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EC3322862448A009BFB3E /* ViewController.swift */; };
+		CE5EC3332862448A009BFB3E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EC3322862448A009BFB3E /* MainViewController.swift */; };
 		CE5EC3362862448A009BFB3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5EC3342862448A009BFB3E /* Main.storyboard */; };
 		CE5EC3382862448C009BFB3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5EC3372862448C009BFB3E /* Assets.xcassets */; };
 		CE5EC33B2862448C009BFB3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5EC3392862448C009BFB3E /* LaunchScreen.storyboard */; };
+		CE5EC34328624A7D009BFB3E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EC34228624A7D009BFB3E /* MainView.swift */; };
+		CE5EC34828624D2B009BFB3E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EC34728624D2B009BFB3E /* MainViewModel.swift */; };
+		CE5EC34A2862526C009BFB3E /* PryanikyNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EC3492862526C009BFB3E /* PryanikyNetworkRequest.swift */; };
+		CE5EC34C2862531B009BFB3E /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EC34B2862531B009BFB3E /* Interface.swift */; };
+		CE5EC34E28625E45009BFB3E /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EC34D28625E45009BFB3E /* NetworkErrors.swift */; };
+		CE75679D28689C400070915B /* InterfaceElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75679C28689C3F0070915B /* InterfaceElement.swift */; };
+		CE78D3772868C2EE007AE4E5 /* PryanikiNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D3762868C2EE007AE4E5 /* PryanikiNetworkService.swift */; };
+		CE78D3792868C862007AE4E5 /* AutoAlertsFabricPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D3782868C862007AE4E5 /* AutoAlertsFabricPresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3AEC49CF00C3FE014FA0D6D1 /* Pods-testPryaniky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPryaniky.debug.xcconfig"; path = "Target Support Files/Pods-testPryaniky/Pods-testPryaniky.debug.xcconfig"; sourceTree = "<group>"; };
+		57F2EB8D4849F9124D3475E3 /* Pods_testPryaniky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testPryaniky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		890908B63598736485193578 /* Pods-testPryaniky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testPryaniky.release.xcconfig"; path = "Target Support Files/Pods-testPryaniky/Pods-testPryaniky.release.xcconfig"; sourceTree = "<group>"; };
 		CE5EC32B2862448A009BFB3E /* testPryaniky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testPryaniky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5EC32E2862448A009BFB3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5EC3302862448A009BFB3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE5EC3322862448A009BFB3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE5EC3322862448A009BFB3E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CE5EC3352862448A009BFB3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE5EC3372862448C009BFB3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE5EC33A2862448C009BFB3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE5EC33C2862448C009BFB3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE5EC34228624A7D009BFB3E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CE5EC34728624D2B009BFB3E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		CE5EC3492862526C009BFB3E /* PryanikyNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PryanikyNetworkRequest.swift; sourceTree = "<group>"; };
+		CE5EC34B2862531B009BFB3E /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
+		CE5EC34D28625E45009BFB3E /* NetworkErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		CE75679C28689C3F0070915B /* InterfaceElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceElement.swift; sourceTree = "<group>"; };
+		CE78D3762868C2EE007AE4E5 /* PryanikiNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PryanikiNetworkService.swift; sourceTree = "<group>"; };
+		CE78D3782868C862007AE4E5 /* AutoAlertsFabricPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoAlertsFabricPresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCA58ADA33C297B5036D9F16 /* Pods_testPryaniky.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E1B94C5D660A4544A72A194 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AEC49CF00C3FE014FA0D6D1 /* Pods-testPryaniky.debug.xcconfig */,
+				890908B63598736485193578 /* Pods-testPryaniky.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		37088E82993E115EBC42C510 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57F2EB8D4849F9124D3475E3 /* Pods_testPryaniky.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE5EC3222862448A009BFB3E = {
 			isa = PBXGroup;
 			children = (
 				CE5EC32D2862448A009BFB3E /* testPryaniky */,
 				CE5EC32C2862448A009BFB3E /* Products */,
+				2E1B94C5D660A4544A72A194 /* Pods */,
+				37088E82993E115EBC42C510 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +96,47 @@
 		CE5EC32D2862448A009BFB3E /* testPryaniky */ = {
 			isa = PBXGroup;
 			children = (
-				CE5EC32E2862448A009BFB3E /* AppDelegate.swift */,
+				CE5EC34628624CAA009BFB3E /* ModelProvider */,
+				CE5EC34428624C94009BFB3E /* Views */,
+				CE5EC34528624CA0009BFB3E /* ViewModels */,
 				CE5EC3302862448A009BFB3E /* SceneDelegate.swift */,
-				CE5EC3322862448A009BFB3E /* ViewController.swift */,
+				CE5EC32E2862448A009BFB3E /* AppDelegate.swift */,
 				CE5EC3342862448A009BFB3E /* Main.storyboard */,
 				CE5EC3372862448C009BFB3E /* Assets.xcassets */,
 				CE5EC3392862448C009BFB3E /* LaunchScreen.storyboard */,
 				CE5EC33C2862448C009BFB3E /* Info.plist */,
 			);
 			path = testPryaniky;
+			sourceTree = "<group>";
+		};
+		CE5EC34428624C94009BFB3E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE5EC3322862448A009BFB3E /* MainViewController.swift */,
+				CE5EC34228624A7D009BFB3E /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE5EC34528624CA0009BFB3E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CE5EC34728624D2B009BFB3E /* MainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CE5EC34628624CAA009BFB3E /* ModelProvider */ = {
+			isa = PBXGroup;
+			children = (
+				CE5EC3492862526C009BFB3E /* PryanikyNetworkRequest.swift */,
+				CE78D3762868C2EE007AE4E5 /* PryanikiNetworkService.swift */,
+				CE78D3782868C862007AE4E5 /* AutoAlertsFabricPresentable.swift */,
+				CE5EC34D28625E45009BFB3E /* NetworkErrors.swift */,
+				CE5EC34B2862531B009BFB3E /* Interface.swift */,
+				CE75679C28689C3F0070915B /* InterfaceElement.swift */,
+			);
+			path = ModelProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE5EC33F2862448C009BFB3E /* Build configuration list for PBXNativeTarget "testPryaniky" */;
 			buildPhases = (
+				35D288650A28D3183E315178 /* [CP] Check Pods Manifest.lock */,
 				CE5EC3272862448A009BFB3E /* Sources */,
 				CE5EC3282862448A009BFB3E /* Frameworks */,
 				CE5EC3292862448A009BFB3E /* Resources */,
+				0C0C061881D7BFD0DEDA46A7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +207,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C0C061881D7BFD0DEDA46A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testPryaniky/Pods-testPryaniky-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testPryaniky/Pods-testPryaniky-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testPryaniky/Pods-testPryaniky-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35D288650A28D3183E315178 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-testPryaniky-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE5EC3272862448A009BFB3E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5EC3332862448A009BFB3E /* ViewController.swift in Sources */,
+				CE5EC34C2862531B009BFB3E /* Interface.swift in Sources */,
+				CE5EC34828624D2B009BFB3E /* MainViewModel.swift in Sources */,
+				CE78D3772868C2EE007AE4E5 /* PryanikiNetworkService.swift in Sources */,
+				CE75679D28689C400070915B /* InterfaceElement.swift in Sources */,
+				CE5EC3332862448A009BFB3E /* MainViewController.swift in Sources */,
+				CE78D3792868C862007AE4E5 /* AutoAlertsFabricPresentable.swift in Sources */,
+				CE5EC34A2862526C009BFB3E /* PryanikyNetworkRequest.swift in Sources */,
 				CE5EC32F2862448A009BFB3E /* AppDelegate.swift in Sources */,
+				CE5EC34E28625E45009BFB3E /* NetworkErrors.swift in Sources */,
 				CE5EC3312862448A009BFB3E /* SceneDelegate.swift in Sources */,
+				CE5EC34328624A7D009BFB3E /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +406,7 @@
 		};
 		CE5EC3402862448C009BFB3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AEC49CF00C3FE014FA0D6D1 /* Pods-testPryaniky.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +435,7 @@
 		};
 		CE5EC3412862448C009BFB3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 890908B63598736485193578 /* Pods-testPryaniky.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
