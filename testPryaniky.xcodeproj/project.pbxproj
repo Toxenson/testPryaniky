@@ -20,8 +20,8 @@
 		CE5EC34C2862531B009BFB3E /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EC34B2862531B009BFB3E /* Interface.swift */; };
 		CE5EC34E28625E45009BFB3E /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EC34D28625E45009BFB3E /* NetworkErrors.swift */; };
 		CE75679D28689C400070915B /* InterfaceElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75679C28689C3F0070915B /* InterfaceElement.swift */; };
-		CE78D3772868C2EE007AE4E5 /* PryanikiNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D3762868C2EE007AE4E5 /* PryanikiNetworkService.swift */; };
-		CE78D3792868C862007AE4E5 /* AutoAlertsFabricPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D3782868C862007AE4E5 /* AutoAlertsFabricPresentable.swift */; };
+		CE78D3772868C2EE007AE4E5 /* PryanikyNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D3762868C2EE007AE4E5 /* PryanikyNetworkService.swift */; };
+		CE78D3792868C862007AE4E5 /* PryanikyAlertsFabricPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D3782868C862007AE4E5 /* PryanikyAlertsFabricPresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +42,8 @@
 		CE5EC34B2862531B009BFB3E /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
 		CE5EC34D28625E45009BFB3E /* NetworkErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		CE75679C28689C3F0070915B /* InterfaceElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceElement.swift; sourceTree = "<group>"; };
-		CE78D3762868C2EE007AE4E5 /* PryanikiNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PryanikiNetworkService.swift; sourceTree = "<group>"; };
-		CE78D3782868C862007AE4E5 /* AutoAlertsFabricPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoAlertsFabricPresentable.swift; sourceTree = "<group>"; };
+		CE78D3762868C2EE007AE4E5 /* PryanikyNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PryanikyNetworkService.swift; sourceTree = "<group>"; };
+		CE78D3782868C862007AE4E5 /* PryanikyAlertsFabricPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PryanikyAlertsFabricPresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				CE5EC3492862526C009BFB3E /* PryanikyNetworkRequest.swift */,
-				CE78D3762868C2EE007AE4E5 /* PryanikiNetworkService.swift */,
-				CE78D3782868C862007AE4E5 /* AutoAlertsFabricPresentable.swift */,
+				CE78D3762868C2EE007AE4E5 /* PryanikyNetworkService.swift */,
+				CE78D3782868C862007AE4E5 /* PryanikyAlertsFabricPresentable.swift */,
 				CE5EC34D28625E45009BFB3E /* NetworkErrors.swift */,
 				CE5EC34B2862531B009BFB3E /* Interface.swift */,
 				CE75679C28689C3F0070915B /* InterfaceElement.swift */,
@@ -256,10 +256,10 @@
 			files = (
 				CE5EC34C2862531B009BFB3E /* Interface.swift in Sources */,
 				CE5EC34828624D2B009BFB3E /* MainViewModel.swift in Sources */,
-				CE78D3772868C2EE007AE4E5 /* PryanikiNetworkService.swift in Sources */,
+				CE78D3772868C2EE007AE4E5 /* PryanikyNetworkService.swift in Sources */,
 				CE75679D28689C400070915B /* InterfaceElement.swift in Sources */,
 				CE5EC3332862448A009BFB3E /* MainViewController.swift in Sources */,
-				CE78D3792868C862007AE4E5 /* AutoAlertsFabricPresentable.swift in Sources */,
+				CE78D3792868C862007AE4E5 /* PryanikyAlertsFabricPresentable.swift in Sources */,
 				CE5EC34A2862526C009BFB3E /* PryanikyNetworkRequest.swift in Sources */,
 				CE5EC32F2862448A009BFB3E /* AppDelegate.swift in Sources */,
 				CE5EC34E28625E45009BFB3E /* NetworkErrors.swift in Sources */,
