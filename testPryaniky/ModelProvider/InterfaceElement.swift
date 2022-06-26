@@ -22,7 +22,6 @@ struct InterfaceElement: Decodable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         name = try values.decode(InterfaceElements.self, forKey: .name)
-        debugPrint("parsing \(name)")
         switch name {
         case .text:
             data = try values.decode(TextData.self, forKey: .data)

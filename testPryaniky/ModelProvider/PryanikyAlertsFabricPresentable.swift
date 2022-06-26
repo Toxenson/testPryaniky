@@ -6,7 +6,7 @@
 //
 import UIKit
 
-struct AutoAlertsFabricPresentable {
+struct PryanikyAlertsFabricPresentable {
     
     private static func getWarningAlert(title: String, message: String) -> UIAlertController {
         let alertController = UIAlertController(title: title,

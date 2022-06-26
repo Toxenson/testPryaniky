@@ -8,8 +8,6 @@
 import RxSwift
 import Moya
 
-
-
 protocol HaveViewModel: AnyObject {
     associatedtype ViewModel
 
@@ -21,7 +19,10 @@ final class MainViewModel {
     
     private var interface: Interface? {
         didSet {
-            interfaceSubject.onNext(interface)
+            guard let interface = interface else {
+                return
+            }
+            interfaceElementsSubject.onNext(interface.views)
         }
     }
     private var error: MoyaError? {
@@ -30,7 +31,7 @@ final class MainViewModel {
         }
     }
     private let interfaceService: PryanikyNetworkService = PryanikyNetworkServiceImpl()
-    let interfaceSubject = PublishSubject<Interface?>()
+    let interfaceElementsSubject = PublishSubject<[InterfaceElements]>()
     let errorSubject = PublishSubject<MoyaError?>()
     
     func loadModel() {

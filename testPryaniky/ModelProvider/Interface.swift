@@ -12,13 +12,10 @@ struct Interface: Decodable {
     let views: [InterfaceElements]
     
     static func mapSelf(_ json: Data) -> Interface? {
-        debugPrint("start parsing")
         do {
             let model = try JSONDecoder().decode(Interface.self, from: json)
-            debugPrint("json parsed")
             return model
         } catch {
-            debugPrint("wrong model")
             return nil
         }
     }

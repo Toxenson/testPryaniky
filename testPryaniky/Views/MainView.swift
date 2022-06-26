@@ -10,6 +10,7 @@ import UIKit
 class MainView: UIView, HaveViewModel {
     
     //MARK: - Properties
+    
     typealias ViewModel = MainViewModel
     var viewModel: ViewModel? {
         didSet {
@@ -17,19 +18,30 @@ class MainView: UIView, HaveViewModel {
                 return
             }
             debugPrint("viewModel seted")
-            _ = viewModel.subject.subscribe { event in
-                self.viewModelChanged(viewModel)
+            _ = viewModel.interfaceElementsSubject.subscribe { event in
+                switch event {
+                case .next(let views):
+                    self.mainTableViewRows = views
+                    self.viewModelChanged(viewModel)
+                case .error(_):
+                    return
+                case .completed:
+                    return
+                }
             }
         }
     }
     private let mainTableView = UITableView()
+    private var mainTableViewRows: [InterfaceElements] = []
     
     
     //MARK: - Lifecycle
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpMainView()
         setUpMainTableView()
+        registerTableViewCells()
     }
     
     required init?(coder: NSCoder) {
@@ -47,8 +59,15 @@ class MainView: UIView, HaveViewModel {
     }
     
     private func setUpMainTableView() {
+        mainTableView.delegate = self
+        mainTableView.dataSource = self
+        mainTableView.translatesAutoresizingMaskIntoConstraints = false
         mainTableView.layer.cornerRadius = 16
         addSubview(mainTableView)
+    }
+    
+    private func registerTableViewCells() {
+        mainTableView.register(TextTableViewCell.self, forCellReuseIdentifier: TextTableViewCell.cellId)
     }
     
     private func activateConstraints() {
@@ -56,15 +75,18 @@ class MainView: UIView, HaveViewModel {
             [
                 mainTableView.topAnchor.constraint(equalTo: topAnchor, constant: safeAreaInsets.top),
                 mainTableView.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
-                mainTableView.rightAnchor.constraint(equalTo: rightAnchor, constant: 16),
-                mainTableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: safeAreaInsets.bottom)
+                mainTableView.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
+                mainTableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -safeAreaInsets.bottom)
             ]
         )
     }
     
     //MARK: - Actions
+    
     func viewModelChanged(_ viewModel: ViewModel) {
-        print("changing")
+        debugPrint("changing")
+        debugPrint("rows is \(mainTableViewRows)")
+        mainTableView.reloadData()
     }
 }
 
@@ -72,10 +94,13 @@ class MainView: UIView, HaveViewModel {
 
 extension MainView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        model = viewModel?.subject.subscribe(<#T##observer: ObserverType##ObserverType#>)
+        return mainTableViewRows.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        if let cell = tableView.dequeueReusableCell(withIdentifier: TextTableViewCell.cellId) {
+            return cell
+        }
+        return UITableViewCell()
     }
 }

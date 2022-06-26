@@ -22,6 +22,7 @@
 		CE75679D28689C400070915B /* InterfaceElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75679C28689C3F0070915B /* InterfaceElement.swift */; };
 		CE78D3772868C2EE007AE4E5 /* PryanikyNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D3762868C2EE007AE4E5 /* PryanikyNetworkService.swift */; };
 		CE78D3792868C862007AE4E5 /* PryanikyAlertsFabricPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D3782868C862007AE4E5 /* PryanikyAlertsFabricPresentable.swift */; };
+		CE78D37E2868DBC1007AE4E5 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D37D2868DBC1007AE4E5 /* TextTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		CE75679C28689C3F0070915B /* InterfaceElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceElement.swift; sourceTree = "<group>"; };
 		CE78D3762868C2EE007AE4E5 /* PryanikyNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PryanikyNetworkService.swift; sourceTree = "<group>"; };
 		CE78D3782868C862007AE4E5 /* PryanikyAlertsFabricPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PryanikyAlertsFabricPresentable.swift; sourceTree = "<group>"; };
+		CE78D37D2868DBC1007AE4E5 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		CE5EC34428624C94009BFB3E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE78D37C2868DB86007AE4E5 /* Cells */,
 				CE5EC3322862448A009BFB3E /* MainViewController.swift */,
 				CE5EC34228624A7D009BFB3E /* MainView.swift */,
 			);
@@ -137,6 +140,14 @@
 				CE75679C28689C3F0070915B /* InterfaceElement.swift */,
 			);
 			path = ModelProvider;
+			sourceTree = "<group>";
+		};
+		CE78D37C2868DB86007AE4E5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE78D37D2868DBC1007AE4E5 /* TextTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 				CE75679D28689C400070915B /* InterfaceElement.swift in Sources */,
 				CE5EC3332862448A009BFB3E /* MainViewController.swift in Sources */,
 				CE78D3792868C862007AE4E5 /* PryanikyAlertsFabricPresentable.swift in Sources */,
+				CE78D37E2868DBC1007AE4E5 /* TextTableViewCell.swift in Sources */,
 				CE5EC34A2862526C009BFB3E /* PryanikyNetworkRequest.swift in Sources */,
 				CE5EC32F2862448A009BFB3E /* AppDelegate.swift in Sources */,
 				CE5EC34E28625E45009BFB3E /* NetworkErrors.swift in Sources */,
