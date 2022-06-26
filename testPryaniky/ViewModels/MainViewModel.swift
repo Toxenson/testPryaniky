@@ -15,6 +15,11 @@ protocol HaveViewModel: AnyObject {
     func viewModelChanged(_ viewModel: ViewModel)
 }
 
+protocol InterfaceCellViewModel {
+    var name: InterfaceElements { get set }
+    var data: InterfaceElementData { get set }
+}
+
 final class MainViewModel {
     
     private var interface: Interface? {
@@ -22,7 +27,8 @@ final class MainViewModel {
             guard let interface = interface else {
                 return
             }
-            interfaceElementsSubject.onNext(interface.views)
+            configureInterfaceCells(with: interface)
+            interfaceElementsSubject.onNext(interfaceCells)
         }
     }
     private var error: MoyaError? {
@@ -31,7 +37,8 @@ final class MainViewModel {
         }
     }
     private let interfaceService: PryanikyNetworkService = PryanikyNetworkServiceImpl()
-    let interfaceElementsSubject = PublishSubject<[InterfaceElements]>()
+    private var interfaceCells: [InterfaceCellViewModel] = []
+    let interfaceElementsSubject = PublishSubject<[InterfaceCellViewModel]>()
     let errorSubject = PublishSubject<MoyaError?>()
     
     func loadModel() {
@@ -42,6 +49,22 @@ final class MainViewModel {
             
             if let error = error {
                 self.error = error
+            }
+        }
+    }
+    
+    private func configureInterfaceCells(with interface: Interface) {
+        for element in interface.views {
+            guard let elementData = interface.data.first(where: { $0.name == element }) else {
+                return
+            }
+            switch element {
+            case .text:
+                interfaceCells.append(TextCellViewModel(name: elementData.name, data: elementData.data))
+            case .picture:
+                interfaceCells.append(PictureCellViewModel(name: elementData.name, data: elementData.data))
+            case .selector:
+                interfaceCells.append(SelectorCellViewModel(name: elementData.name, data: elementData.data))
             }
         }
     }

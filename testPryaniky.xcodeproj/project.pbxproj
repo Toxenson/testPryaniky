@@ -23,6 +23,9 @@
 		CE78D3772868C2EE007AE4E5 /* PryanikyNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D3762868C2EE007AE4E5 /* PryanikyNetworkService.swift */; };
 		CE78D3792868C862007AE4E5 /* PryanikyAlertsFabricPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D3782868C862007AE4E5 /* PryanikyAlertsFabricPresentable.swift */; };
 		CE78D37E2868DBC1007AE4E5 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78D37D2868DBC1007AE4E5 /* TextTableViewCell.swift */; };
+		CEDAE2472868F6EA002A9E95 /* TextCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAE2462868F6EA002A9E95 /* TextCellViewModel.swift */; };
+		CEDAE2492868F997002A9E95 /* PictureCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAE2482868F997002A9E95 /* PictureCellViewModel.swift */; };
+		CEDAE24B2868FA33002A9E95 /* SelectorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAE24A2868FA33002A9E95 /* SelectorCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		CE78D3762868C2EE007AE4E5 /* PryanikyNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PryanikyNetworkService.swift; sourceTree = "<group>"; };
 		CE78D3782868C862007AE4E5 /* PryanikyAlertsFabricPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PryanikyAlertsFabricPresentable.swift; sourceTree = "<group>"; };
 		CE78D37D2868DBC1007AE4E5 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		CEDAE2462868F6EA002A9E95 /* TextCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCellViewModel.swift; sourceTree = "<group>"; };
+		CEDAE2482868F997002A9E95 /* PictureCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCellViewModel.swift; sourceTree = "<group>"; };
+		CEDAE24A2868FA33002A9E95 /* SelectorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,7 @@
 		CE5EC34528624CA0009BFB3E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CEDAE2452868F6C3002A9E95 /* Cells */,
 				CE5EC34728624D2B009BFB3E /* MainViewModel.swift */,
 			);
 			path = ViewModels;
@@ -146,6 +153,16 @@
 			isa = PBXGroup;
 			children = (
 				CE78D37D2868DBC1007AE4E5 /* TextTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CEDAE2452868F6C3002A9E95 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CEDAE2462868F6EA002A9E95 /* TextCellViewModel.swift */,
+				CEDAE2482868F997002A9E95 /* PictureCellViewModel.swift */,
+				CEDAE24A2868FA33002A9E95 /* SelectorCellViewModel.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -273,10 +290,13 @@
 				CE78D3792868C862007AE4E5 /* PryanikyAlertsFabricPresentable.swift in Sources */,
 				CE78D37E2868DBC1007AE4E5 /* TextTableViewCell.swift in Sources */,
 				CE5EC34A2862526C009BFB3E /* PryanikyNetworkRequest.swift in Sources */,
+				CEDAE2472868F6EA002A9E95 /* TextCellViewModel.swift in Sources */,
 				CE5EC32F2862448A009BFB3E /* AppDelegate.swift in Sources */,
+				CEDAE24B2868FA33002A9E95 /* SelectorCellViewModel.swift in Sources */,
 				CE5EC34E28625E45009BFB3E /* NetworkErrors.swift in Sources */,
 				CE5EC3312862448A009BFB3E /* SceneDelegate.swift in Sources */,
 				CE5EC34328624A7D009BFB3E /* MainView.swift in Sources */,
+				CEDAE2492868F997002A9E95 /* PictureCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

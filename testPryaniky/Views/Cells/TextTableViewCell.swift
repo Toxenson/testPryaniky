@@ -6,11 +6,35 @@
 //
 
 import UIKit
+import RxSwift
 
 class TextTableViewCell: UITableViewCell {
     //MARK: - Properties
     
     static let cellId = String(describing: TextTableViewCell.self)
+    private let bag = DisposeBag()
+    var viewModel: TextCellViewModel? {
+        didSet {
+            guard let viewModel = viewModel else {
+                return
+            }
+            _ = viewModel.textDataSubject.subscribe(
+                { event in
+                    switch event {
+                    case .next(let text):
+                        guard let text = text else {
+                            return
+                        }
+                        self.mainTextLabel.text = text
+                    case .error(_):
+                        return
+                    case .completed:
+                        return
+                    }
+                }
+            ).disposed(by: bag)
+        }
+    }
     private let mainTextLabel = UILabel()
     
     //MARK: - Lifecycle

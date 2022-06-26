@@ -6,33 +6,37 @@
 //
 
 import UIKit
+import RxSwift
 
 class MainView: UIView, HaveViewModel {
     
     //MARK: - Properties
     
     typealias ViewModel = MainViewModel
+    private let bag = DisposeBag()
     var viewModel: ViewModel? {
         didSet {
             guard let viewModel = viewModel else {
                 return
             }
             debugPrint("viewModel seted")
-            _ = viewModel.interfaceElementsSubject.subscribe { event in
-                switch event {
-                case .next(let views):
-                    self.mainTableViewRows = views
-                    self.viewModelChanged(viewModel)
-                case .error(_):
-                    return
-                case .completed:
-                    return
+            _ = viewModel.interfaceElementsSubject.subscribe(
+                { event in
+                    switch event {
+                    case .next(let views):
+                        self.mainTableViewRows = views
+                        self.viewModelChanged(viewModel)
+                    case .error(_):
+                        return
+                    case .completed:
+                        return
+                    }
                 }
-            }
+            ).disposed(by: bag)
         }
     }
     private let mainTableView = UITableView()
-    private var mainTableViewRows: [InterfaceElements] = []
+    private var mainTableViewRows: [InterfaceCellViewModel] = []
     
     
     //MARK: - Lifecycle
@@ -98,7 +102,9 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: TextTableViewCell.cellId) {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: TextTableViewCell.cellId) as? TextTableViewCell,
+            let cellViewModel = mainTableViewRows[0] as? TextCellViewModel{
+            cell.viewModel = cellViewModel
             return cell
         }
         return UITableViewCell()
